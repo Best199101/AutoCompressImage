@@ -32,7 +32,7 @@ class CompressImg ():
 
                     self.get_img_path(temp_path)
                 else:
-                    if os.path.splitext(p)[1] == '.png' or os.path.splitext(p)[1] == '.json':
+                    if os.path.splitext(p)[1] == '.png' or os.path.splitext(p)[1] == '.jpg' or os.path.splitext(p)[1] == '.jpeg' or os.path.splitext(p)[1] == '.bmp' or os.path.splitext(p)[1] == '.json':
                         self.png_path.append(os.path.join(finder, p))
 
             
@@ -58,7 +58,7 @@ class CompressImg ():
 
             self.mkdir(outFile)
 
-            if fileSuffix == '.png':
+            if fileSuffix == '.png' or fileSuffix == '.jpg' or fileSuffix == '.jpeg' or fileSuffix == '.bmp':
 
                 png_path = outFile + '/' + basename
 
